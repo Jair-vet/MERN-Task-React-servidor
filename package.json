@@ -1,0 +1,27 @@
+{
+  "name": "merntaskservidor",
+  "version": "1.0.0",
+  "description": "MERN API para MERN TASKS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon .8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jair-vet/MERN-Task-React/settings"
+  },
+  "author": "Jair Aceves Garcia",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.13.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.13"
+  }
+}
