@@ -16,7 +16,7 @@ app.use(express.json({ extended: true }));
 
 
 // Puerto de la App
-const PORT = process.env.PORT || 4000;
+const port = process.env.port || 4000;
 
 // Importar Rutas
 app.use('/api/usuarios', require('./routes/usuarios'));
@@ -26,6 +26,6 @@ app.use('/api/tareas', require('./routes/tareas'));
 
 
 // Arrancar la App
-app.listen(PORT, () => {
-    console.log(`Servidor Arrancado en el puerto ${PORT}`);
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Servidor Arrancado en el puerto ${port}`);
 });
