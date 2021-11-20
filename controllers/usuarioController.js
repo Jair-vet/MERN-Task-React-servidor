@@ -35,7 +35,7 @@ exports.crearUsuario = async(req, res) => {
         // Guarda el usuario en la base de datos
         await usuario.save();
 
-        // Crear y firmar el JWT
+        // Crear el JWT
         const payload = {
             usuario: {
                 id: usuario.id
@@ -44,7 +44,7 @@ exports.crearUsuario = async(req, res) => {
 
         // Firmar el JWT
         jwt.sign(payload, process.env.SECRETA, {
-            expiresIn: 3600 // 1 hora
+            expiresIn: 36000
         }, (error, token) => {
             if (error) throw error;
 
@@ -53,7 +53,7 @@ exports.crearUsuario = async(req, res) => {
         });
 
         // Mensaje de confirmación
-        res.json({msg: 'Usuario Creado Correctamente'});
+        // res.json({msg: 'Usuario Creado Correctamente'});
 
     } catch (error) {
         console.log(error);
