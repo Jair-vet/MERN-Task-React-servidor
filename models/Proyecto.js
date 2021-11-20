@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 
-const ProyectoSchema = new mongoose.Schema({
+const ProyectoSchema = mongoose.Schema({
     nombre: {
         type: String,
         required: true,
         trim: true
     },
     creador: {
-        type: mongoose.Schema.Types.ObjectId, //Cada usuario tiene su id
-        ref: 'Usuario',
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'Usuario'
     },
     creado: {
         type: Date,

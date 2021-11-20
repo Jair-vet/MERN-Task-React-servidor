@@ -1,11 +1,10 @@
 const mongoose = require('mongoose');
 
-// Modelos para la base de datos
 const UsuariosSchema = mongoose.Schema({
     nombre: {
         type: String,
         required: true,
-        trim: true      // Elimina los espacios en balnco
+        trim: true
     },
     email: {
         type: String,
@@ -16,11 +15,11 @@ const UsuariosSchema = mongoose.Schema({
     password: {
         type: String,
         required: true,
-        trim: true,
+        trim: true
     },
     registro: {
         type: Date,
-        default: Date.now
+        default: Date.now()
     }
 });
 

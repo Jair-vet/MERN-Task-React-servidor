@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema({
+
+const TareaSchema = mongoose.Schema({
     nombre: {
         type: String,
         required: true,
@@ -7,16 +8,16 @@ const Schema = mongoose.Schema({
     },
     estado: {
         type: Boolean,
-        required: false,
+        default: false
     },
     creado: {
         type: Date,
         default: Date.now()
-    },
+    }, 
     proyecto: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Proyecto',
+        ref: 'Proyecto'
     }
 });
 
-module.exports = mongoose.model('Tarea', Schema);
+module.exports = mongoose.model('Tarea', TareaSchema);

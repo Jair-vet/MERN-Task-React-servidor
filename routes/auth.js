@@ -7,13 +7,12 @@ const auth = require('../middleware/auth');
 
 // Iniciar sesión
 // api/auth
-router.post('/',
-    authController.auteticarUsuario
+router.post('/', 
+    authController.autenticarUsuario
 );
 
-router.get('/', 
+// Obtiene el usuario autenticado
+router.get('/',
     auth,
     authController.usuarioAutenticado
 );
-
-module.exports = router;
